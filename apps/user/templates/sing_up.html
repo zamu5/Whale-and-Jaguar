@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div>
+		<header>
+			<h1>title</h1>
+		</header>
+		<section>
+			<form method="post">
+                {% csrf_token %}
+				<h1>Create Account</h1>
+                <input class="form-control" type="text" name="first_name" placeholder="First name">
+                <input class="form-control" type="text" name="last_name" placeholder="Last name">
+                <input class="form-control" type="email" name="email" placeholder="Email">
+                <input class="form-control" type="text" name="username" placeholder="Username">
+                <input class="form-control" type="password" name="password1" placeholder="Password">
+                <input class="form-control" type="password" name="password2" placeholder="Repeat password">
+
+
+				<input type="submit" name="create_account" value="Create Account">
+
+			</form>
+		</section>
+
+	</div>
+
+</body>
+</html>
