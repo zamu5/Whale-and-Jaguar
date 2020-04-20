@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<section>
-			<form method="post">
-                {% csrf_token %}
-				<h1>Login</h1>
-                <input class="form-control" type="text" name="username">
-                <input class="form-control" type="text" name="password">
-                <input class="btn btn-primar" type="submit" name="Log">
+{% extends 'base.html' %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+		<h1>Login</h1>
+        <input class="form-control" type="text" name="username">
+        <input class="form-control" type="password" name="password">
+        <input class="btn btn-primar" type="submit" name="Log">
+        <a href="{% url 'password_reset' %}">Forgot password</a>
 
-			</form>
-		</section>
-</body>
-</html>
+	</form>
+{% endblock %}

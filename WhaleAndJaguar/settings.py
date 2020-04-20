@@ -125,3 +125,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = reverse_lazy('home')
+LOGOUT_REDIRECT_URL = reverse_lazy('login')
+
+
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'szamu0205@gmail.com'
+EMAIL_HOST_PASSWORD = 'Colombia.2019'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
