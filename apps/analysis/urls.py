@@ -1,8 +1,7 @@
 from django.contrib.auth.decorators import login_required
-from django.urls import path, include
-from .views import index
-from django.contrib.auth.views import LoginView
+from django.urls import path
+from .views import home
 
 urlpatterns = [
-    path('', login_required(index), name='home'),
+    path('', login_required(home), name='index'),
 ]
