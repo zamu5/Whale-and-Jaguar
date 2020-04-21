@@ -135,3 +135,7 @@ EMAIL_PORT = 25
 EMAIL_HOST_USER = 'szamu0205@gmail.com'
 EMAIL_HOST_PASSWORD = 'Colombia.2019'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]

@@ -3,5 +3,5 @@ from django.urls import path
 from .views import home
 
 urlpatterns = [
-    path('', login_required(home), name='index'),
+    path('', login_required(home), name='home'),
 ]

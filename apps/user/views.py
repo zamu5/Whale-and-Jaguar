@@ -8,4 +8,4 @@ class UserRegister(CreateView):
     model = User
     template_name = 'sing_up.html'
     form_class = RegisterForm
-    success_url = reverse_lazy('task_list')
+    success_url = reverse_lazy('home')

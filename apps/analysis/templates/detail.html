@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
+{% block title %}
+Analysis
+{% endblock %}
+{% block navbar %}
+    {% include 'navbar.html' %}
+{% endblock %}
 {% block content %}
     <h1>HOME</h1>
     {% for key, value in data.items %}
