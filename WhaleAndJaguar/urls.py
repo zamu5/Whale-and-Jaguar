@@ -4,13 +4,14 @@ from django.contrib.auth.views import LoginView, PasswordResetView, PasswordRese
 from django.contrib.auth.views import PasswordResetCompleteView, logout_then_login
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import landing
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', landing, name='landing'),
     path('user/', include('apps.user.urls')),
     path('analysis/', include('apps.analysis.urls')),
     path('accounts/login/', LoginView.as_view(template_name='index.html'), name='login'),
-    path('', LoginView.as_view(template_name='index.html'), name='login'),
     path('logout/', logout_then_login, name='logout'),
     path('reset/password_reset', PasswordResetView.as_view(template_name='Registration/password_reset_form.html',
                                                            email_template_name='Registration/password_reset_email.html'),

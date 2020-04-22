@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+Login
+{% endblock %}
+{% block content %}
+    <div class="limiter">
+    </div>
+		<div class="container-login100" >
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+                <div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								<a href="{% url 'login' %}"><input class="button-login" type="submit" name="Log" value="Sign in"></a>
+							</button>
+						</div>
+				</div>
+                <div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								<a href="{% url 'create_user' %}"><input class="button-login" type="submit" name="Log" value="Sing Up"></a>
+							</button>
+						</div>
+				</div>
+            </div>
+        </div>
+
+{% endblock %}>
