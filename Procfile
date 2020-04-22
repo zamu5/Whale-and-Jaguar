@@ -1,0 +1,1 @@
+web: gunicorn WhaleAndJaguar.wsgi --log-file -
