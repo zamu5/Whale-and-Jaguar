@@ -417,7 +417,119 @@ iframe {
 .text-right, .text-left{
   width: 50%;
 }
-.links{
+.links {
   display: flex;
   flex-wrap: wrap;
+}
+.dropdown-menu{
+  margin: 15px;
+}
+.custom-select{
+  padding-right: 50%;
+}
+#notfound {
+  position: relative;
+  height: 80vh;
+}
+#notfound .notfound-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+#notfound .notfound-bg:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  line-height: 1.4;
+}
+
+.notfound .notfound-404 {
+  position: relative;
+  height: 200px;
+}
+
+.notfound .notfound-404 h1 {
+  font-family: 'Passion One', cursive;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 220px;
+  margin: 0px;
+  color: #222225;
+  text-transform: uppercase;
+}
+
+.btn-outline-success{
+  margin-left: 10px;
+}
+.dropdown-toggle{
+  margin-right: 70px;
+}
+.move{
+  margin-left: 13%;
+}
+.table-d{
+  width: 80%;
+  padding-left: 15%;
+}
+.table-s{
+    margin-top: 10px;
+}
+.data-w{
+  width: 25%;
+}
+.home{
+  height: 90.5%;
+  background-image: url('../img/index.gif');
+  background-size: 100% 95%;
+}
+.wrap-login100{
+  background: transparent;
+}
+.login100-form-title{
+  color: #1e0094;
+}
+.limiter{
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/index.gif');
+  background-size: 100% 100%;
+  opacity: 0.4;
+}
+.container-login100{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ser{
+  color: #1e0094;
+}
+.limite{
+  width: 100%;
+  height: 110%;
+  background-image: url('../img/index.gif');
+  background-size: 100% 100%;
+  opacity: 0.4;
 }

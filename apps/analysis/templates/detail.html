@@ -6,12 +6,64 @@ Analysis
     {% include 'navbar.html' %}
 {% endblock %}
 {% block content %}
-    <h1>HOME</h1>
-    {% for key, value in data.items %}
-        <h2>{{ key }}</h2>
+    <div class="table-d">
+{% for key, value in data.items %}
+
+    <table class="table table-bordered table-striped table-s">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col" class="data-w">{{ key }} data</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
         {% for k, v in value.items %}
-            <h5>{{ k }}</h5><h5>{{ v }}</h5>
-            <br>
+         <tr>
+            <td>{{ k }}</td>
+            {% if k == 'text' %}
+                <td ><details><summary>Show text</summary><div>{{ v }}</div></details></td>
+            {% elif k == 'categories' %}
+                <td>
+                <table><tbody>
+                {% for i in v %}
+                    {% for ke, va in i.items %}
+                        <tr>
+                        <td>{{ ke }}</td>
+                        <td>{{ va }}</td>
+                        </tr>
+                    {% endfor %}
+                {% endfor %}
+                </tbody></table>
+                </td>
+            {% elif k == 'entities' %}
+                <td>
+                <table><tbody>
+                {% for ke, va in v.items %}
+                    <tr>
+                    <td>{{ ke }}</td>
+                    <td>
+                    {% for i in va %}
+                        <p>{{ i }}</p>
+                    {% endfor %}
+                    </td>
+                    </tr>
+                {% endfor %}
+                </tbody></table>
+                </td>
+            {% elif k == 'sentences' %}
+                <td>
+                {% for i in v %}
+                    {{ i }}<br>
+                {% endfor %}
+                </td>
+            {% else %}
+                <td>{{ v }}</td>
+            {% endif %}
+         </tr>
         {% endfor %}
+    </tbody>
+    </table>
     {% endfor %}
+    </div>
+
 {% endblock %}
