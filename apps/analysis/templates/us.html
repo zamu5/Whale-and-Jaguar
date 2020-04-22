@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-Home
+About us
 {% endblock %}
-{% block content %}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+{% block navbar %}
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="{% url 'home' %}"><i class="fas fa-home"></i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -25,19 +25,14 @@ Home
     </ul>
   </div>
 </nav>
-    <div class="home">
-    </div>
-    <div class="container-login100">
-        <form class="form-inline my-2 my-lg-0" method="post">
-                    {% csrf_token %}
-                  <input class="form-control mr-sm-2" type="search" placeholder="URL to analyze" name="url">
-                  <select name="type" class="custom-select">
-                        <option selected disabled>Select option...</option>
-                        {% for option in form.type %}
-                            <option>{{ option }}</option>
-                        {% endfor %}
-                  </select>
-                  <button class="btn btn-primary my-2 my-sm-0" type="submit">Analyze</button>
-                </form>
-    </div>
+{% endblock %}
+{% block content %}
+<div class="us">
+        <div class="ser-img">
+            <img src="{% static 'img/foto.JPG' %}">
+        </div>
+        <div class="ser-text">
+            Mechatronic engineer with a focus on project management, software development, low and high level programming language management (C, Shell Scripting, Python, SQL, HTML, CSS). Knowledge in DevOps using Nginx, Haproxy, SSL certificates, firewalls and Flask.High level of responsibility, ability to face great challenges. High performance in individual and team work, excellent time management, learning ability, sense of responsibility and commitment, honesty and confidentiality.
+        </div>
+ </div>
 {% endblock %}

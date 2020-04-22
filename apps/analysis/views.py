@@ -34,3 +34,5 @@ def home(request):
     return render(request, 'home.html', {'form': form})
 
 
+def aboutus(request):
+    return render(request, 'us.html')

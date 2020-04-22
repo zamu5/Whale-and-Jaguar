@@ -4,17 +4,20 @@ error
 {% endblock %}
 {% block navbar %}
     {% include 'navbar.html' %}
+
 {% endblock %}
 {% block content %}
-    <div id="notfound">
+        <div class="limiter">
+    </div>
+    <div class="container-login100">
 		<div class="notfound">
 			<div class="notfound-404">
-				<h1>404</h1>
+				<h1 class="red">404</h1>
 			</div>
-			<h2>Oops! Url Not Found</h2>
+			<h2 class="red">Oops! Url Not Found</h2>
             <form class="form-inline my-2 my-lg-0" method="post">
                 {% csrf_token %}
-              <input class="form-control mr-sm-2 move" type="search" placeholder="Try other Url" name="url">
+              <input class="form-control mr-sm-2 move" type="search" placeholder="Try other URL" name="url">
               <select name="type" class="custom-select">
                     {% for option in form.type %}
                         {% if option is not '' %}
@@ -22,10 +25,10 @@ error
                         {% endif %}
                     {% endfor %}
               </select>
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              <button class="btn my-2 my-sm-0 btn-primary" type="submit">Search</button>
             </form>
 
-			<a href={% url 'home' %}>Back To Homepage</a>
+            <a href={% url 'home' %}><h3 class="red">Back To Homepage</h3></a>
 		</div>
 	</div>
 {% endblock %}
